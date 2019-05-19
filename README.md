@@ -1,5 +1,5 @@
-@[toc]
-## Angular教程
+[TOC]
+# Angular教程
 
 ## 一、 创建angualr 组件
 
