@@ -1,0 +1,38 @@
+<div class="back"><a [routerLink]="['/home']">返回</a></div>
+		
+		<div class="p_content">		
+			<div class="p_info">		
+				
+				<img [src]="domain+list.img_url" />
+				<h2>{{list.title}}</h2>				
+				<p class="price">{{list.price}}/份</p>
+			</div>
+			<div class="p_detial">
+				<h3>
+					商品详情					
+				</h3>
+				<div class="p_content" [innerHTML]='list.content'> 
+					
+
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer class="pfooter">
+			
+			<div class="cart">				
+				<strong>数量:</strong>
+				<div class="cart_num">
+		          <div class="input_left">-</div>
+		          <div class="input_center">
+		              <input type="text"  readonly="readonly" value="1" name="num" id="num" />
+		          </div>
+		          <div class="input_right">+</div>				      
+		        </div>								
+			
+			</div>
+			
+			<button class="addcart">加入购物车</button>			
+		</footer>
+		
