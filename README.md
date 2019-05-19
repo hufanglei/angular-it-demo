@@ -40,7 +40,7 @@ this.h="<h2>这是一个h2 用[innerHTML]来解析</h2>"
 <div [id]="id" [title]="msg">调试工具看看我的属性</div>
 ```
 
-### ![1558146654256](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558146654256.png)
+### ![1558146654256](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558146654256.png)
 
 #### 4. 数据循环*ngFor
 
@@ -359,7 +359,7 @@ removerData(key){
 
 ## 案例todo-list搜索缓存数据功能
 
-![1558165215295](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558165215295.png)
+![1558165215295](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558165215295.png)
 
 git代码地址:
 
@@ -527,23 +527,23 @@ export class HeaderComponent implements OnInit {
 
 父组件
 
-![1558167805476](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558167805476.png)
+![1558167805476](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558167805476.png)
 
-![1558167840309](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558167840309.png)
+![1558167840309](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558167840309.png)
 
 子组件
 
-#### ![1558167906687](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558167906687.png)
+#### ![1558167906687](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558167906687.png)
 
 ##### 2.父组件把自己整个组件传递给子组件
 
 父组件
 
-##### ![1558168217754](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558168217754.png)
+##### ![1558168217754](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558168217754.png)
 
 子组件
 
-![1558168293221](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558168293221.png)
+![1558168293221](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558168293221.png)
 
 ### 2.子组件通过@Output 触发父组件的方法
 
@@ -614,7 +614,7 @@ run(){
 
 ### 4.总结
 
-![1558170962956](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558170962956.png)
+![1558170962956](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558170962956.png)
 
 ## 六、Angular 中的生命周期函数
 
@@ -637,7 +637,7 @@ run(){
 
 案例:
 
-![1558172106767](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558172106767.png)
+![1558172106767](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558172106767.png)
 
 
 
@@ -990,7 +990,7 @@ const routes: Routes = [
 
 传值
 
-![1558227586388](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558227586388.png)
+![1558227586388](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558227586388.png)
 
 ### 2.Angular routerLink 跳转页面默认路由
 
@@ -1258,7 +1258,7 @@ import { NewslistComponent } from './components/newslist/newslist.component';
 
 效果图
 
-![1558235343529](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558235343529.png)
+![1558235343529](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558235343529.png)
 
 
 
@@ -1274,7 +1274,7 @@ import { NewslistComponent } from './components/newslist/newslist.component';
 
 ### 1.Angular 内置模块
 
-![1558236563207](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558236563207.png)
+![1558236563207](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558236563207.png)
 
 ### 2.Angular 自定义模块
 
@@ -1284,11 +1284,11 @@ import { NewslistComponent } from './components/newslist/newslist.component';
 
 
 
-![1558236600126](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558236600126.png)
+![1558236600126](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558236600126.png)
 
 案例:
 
-![1558236677329](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1558236677329.png)
+![1558236677329](https://github.com/hufanglei/angular-it-demo/blob/master/typora-user-images/1558236677329.png)
 
 创建模块
 
