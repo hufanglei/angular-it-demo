@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" text="返回"></ion-back-button>
+    </ion-buttons>
+    <ion-title>datetime日期组件</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime display-format="YYYY-MM-DD" picker-format="YYYY MM DD" placeholder="选择日期"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <br>
+
+
+  <ion-list>
+      <ion-item>
+        <ion-label>双向数据绑定</ion-label>
+        <ion-datetime display-format="YYYY-MM-DD" picker-format="YYYY MM DD"  [(ngModel)]="day"></ion-datetime>
+      </ion-item>
+  </ion-list>
+
+
+
+  <ion-list>
+      <ion-item>
+        <ion-label>显示当前日期</ion-label>
+        <ion-datetime display-format="YYYY-MM-DD" picker-format="YYYY MM DD"  [(ngModel)]="nowDay" (ionChange)="datetimeChange($event)"></ion-datetime>
+      </ion-item>
+  </ion-list>
+
+
+
+  <ion-list>
+      <ion-item>
+        <ion-label>汉化日期按钮</ion-label>
+        <ion-datetime display-format="YYYY-MM-DD" [pickerOptions]="customPickerOptions" picker-format="YYYY MM DD"  [(ngModel)]="nowDay" (ionChange)="datetimeChange($event)"></ion-datetime>
+      </ion-item>
+  </ion-list>
+
+    {{day}}
+</ion-content>
