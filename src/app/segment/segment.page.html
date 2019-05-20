@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/tabs/tab1" text="返回"></ion-back-button>
+      </ion-buttons>
+    <ion-title>segment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-segment [(ngModel)]="tab">
+      <ion-segment-button value="tab1">
+        <ion-label>简介</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tab2">
+        <ion-label>详情</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tab3">
+          <ion-label>评论</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <div class="info" [ngSwitch]="tab">
+
+      <div *ngSwitchCase="'tab1'">
+          商品简介   --注意ngSwitchCase写法
+      </div>
+
+      <div  *ngSwitchCase="'tab2'">
+          商品详情
+
+      </div>
+      <div  *ngSwitchCase="'tab3'">
+        
+        商品评论
+      
+      </div>
+
+    </div>
+
+
+    
+
+</ion-content>
