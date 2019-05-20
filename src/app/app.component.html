@@ -1,0 +1,30 @@
+<ion-app>
+
+
+   <ion-menu menuId="first" side="start" type="overlay">
+     <ion-header>
+       <ion-toolbar color="success">
+         <ion-title>用户信息</ion-title>
+       </ion-toolbar>
+     </ion-header>
+     <ion-content>
+          <ion-list>
+
+            <ion-menu-toggle>
+              <ion-item [routerDirection]="'root'"  [routerLink]="['/news']">
+                <ion-label>我的新闻</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item [routerLink]="['/product']">
+              <ion-label>我的商品</ion-label>
+            </ion-item>
+
+          </ion-menu-toggle>
+          </ion-list>
+     </ion-content>
+   </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+
+</ion-app>
