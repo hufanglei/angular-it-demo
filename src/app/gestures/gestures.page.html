@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>gestures</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-button (tap)="doTap()">
+    点击事件
+  </ion-button>
+
+
+  <ion-button (press)="doPress()">
+    长按事件
+  </ion-button>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label  (press)="doPress()">衣服</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label  (press)="doPress()">鞋子</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  (press)="doPress()">女装</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>alert</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-button (click)="presentAlert()">
+    presentAlert
+   </ion-button>
+
+
+   <ion-button (click)="presentAlertMultipleButtons()">
+       确定要删除吗
+   </ion-button>
+
+
+   <ion-button (click)="presentAlertPrompt()">
+     alert放表单
+  </ion-button>
+   
+
+   
+
+</ion-content>
