@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" text="返回"></ion-back-button>
+    </ion-buttons>
+    <ion-title>slides</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-slides pager="true" [options]="slideOpts" #slide1 (ionSlideTouchEnd)="slideDidChange()">
+    <ion-slide>
+      <img src="/assets/slide01.png" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/slide02.png" alt="">
+    </ion-slide>
+
+
+  </ion-slides>
+
+
+
+  <br>
+
+  <ion-slides pager="true" #slide2>
+    <ion-slide>
+      <img src="/assets/slide02.png" alt="">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/slide01.png" alt="">
+    </ion-slide>
+
+    <ion-slide>
+        <img src="/assets/02.png" alt="">
+    </ion-slide>
+
+    <ion-slide>
+          <img src="/assets/02.png" alt="">
+     </ion-slide>
+
+  </ion-slides>
+
+
+
+
+  <ion-button (click)="slideNext()">
+    点击按钮跳转到下一页
+  </ion-button>
+
+  
+  <ion-button (click)="slidePrev()">
+      点击按钮跳转到上一页
+    </ion-button>
+
+
+</ion-content>
