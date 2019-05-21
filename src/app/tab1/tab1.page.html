@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+   <div class="center" *ngIf="!hasData">
+       <ion-spinner name="circles"></ion-spinner>
+   </div>
+
+  <ion-list lines="full">
+    <ion-item *ngFor="let item of list" [routerLink]="['/info']" [queryParams]="{aid:item.aid}">
+      <ion-label>{{item.title}}</ion-label>
+    </ion-item>    
+  </ion-list>
+
+  <ion-infinite-scroll threshold="15%" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="正在努力加载中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

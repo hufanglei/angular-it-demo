@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" text="返回"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div class="center" *ngIf="!hasData">
+        <ion-spinner name="circles"></ion-spinner>
+    </div>
+    <h3>{{list.title}}</h3>
+
+    <div class="info" [innerHTML]='list.content'>
+           
+    </div>
+</ion-content>
