@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  
+    <ion-button [routerLink]="['/pinfo']" [queryParams]="{returnUrl:'tab2'}" >
+      跳转到商品详情2
+     </ion-button>
+     
+     <ion-list>
+        <ion-item [routerLink]="['/newsinfo']" [queryParams]="{cid:'1'}">
+          <ion-label>新闻详情1</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/newsinfo']" [queryParams]="{cid:'2'}">
+          <ion-label>新闻详情2</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/newsinfo']" [queryParams]="{cid:'3'}">
+           <ion-label>新闻详情3</ion-label>
+         </ion-item>
+      </ion-list>
+
+</ion-content>

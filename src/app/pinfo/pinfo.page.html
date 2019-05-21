@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+
+   
+    <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon name="arrow-back" slot="start"></ion-icon>
+           返回
+        </ion-button>
+    </ion-buttons>
+
+    <ion-title>pinfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  商品详情
+  <ion-button [routerLink]="['/login']">
+    跳转到登录页面
+   </ion-button>
+
+</ion-content>
