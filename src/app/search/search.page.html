@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+
+      <ion-button (tap)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Filter Schedules" animated></ion-searchbar>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="doSearch()" color="dark">
+        搜索
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="search_content">
+    <div class="hotlist">
+      <h3 class="search_title">热搜</h3>
+      <p>
+        <span>女装</span>
+        <span>男装</span>
+        <span>家具</span>
+        <span>化妆品</span>
+        <span>女装</span>
+        <span>女装</span>
+        <span>男装</span>
+        <span>家具</span>
+        <span>化妆品</span>
+        <span>女装</span>
+        <span>女装</span>
+        <span>男装</span>
+        <span>家具</span>
+        <span>化妆品</span>
+        <span>女装</span>
+      </p>
+
+    </div>
+
+    <div class="history">
+
+      <h3 class="search_title">历史搜索</h3>
+
+      <ion-list lines="full">
+        <ion-item>
+          男装
+        </ion-item>
+        <ion-item>
+          女装
+        </ion-item>
+        <ion-item>
+          汽车
+        </ion-item>
+        <ion-item>
+          美容
+        </ion-item>
+      </ion-list>
+
+    </div>
+
+  </div>
+</ion-content>

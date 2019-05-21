@@ -1,0 +1,60 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+/*自定义的全局css样式*/
+  body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    font-size: 62.5%;    // 浏览器的默认字体大小是16px          16*62.5%=10px
+  }
+
+  body{
+
+    font-size: 1.4rem;
+  }
+  .clearfix{  
+    &::after{
+      display: block;
+      content: "";
+      height: 0px;
+      clear: both;
+    }
+  }
+  
+
+  ul,ol{
+    list-style-type: none;
+  }
+
+
+  .price{
+
+    color: red;
+  }
+
+
+  //导航信息样式
+  .message{
+
+    position: relative;
+    .badge{
+  
+      position: absolute;
+  
+      right: -4px;
+      top:-4px;
+      font-size: 1rem;
+  
+    }
+  }

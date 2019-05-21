@@ -1,0 +1,62 @@
+.user_top{
+
+   background: url('/assets/user_bg.jpg') no-repeat center center / 100% 100%;
+
+   color: #fff;
+
+   padding: 3rem 1rem;
+
+   display: flex;
+   align-items: center;
+
+   .user_left{
+
+        width: 5rem;
+
+        img{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5rem;
+        }
+   }
+
+   .user_right{
+
+        flex: 1px;
+
+        padding-left: 1rem;
+
+        font-size: 1.4rem;
+        h4{
+
+            font-size: 1.6rem;
+        }
+
+        ion-icon{
+            position: relative;
+            top:.2rem;
+        }
+   }
+
+}
+
+
+
+
+ion-item-divider{
+
+    min-height: 1rem!important;
+}
+
+.user_list{
+
+    ion-icon{
+
+        font-size: 1.8rem;
+    }
+
+    span{
+
+        font-size: 1.6rem;
+    }
+}
