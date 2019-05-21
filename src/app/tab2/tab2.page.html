@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="cate_content">
+    <div class="cate_left">
+      <ion-list lines="full">
+        <ion-item *ngFor="let item of lCateList">
+          <ion-label>{{item}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="cate_right">
+
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="4" *ngFor="let item of rCateList">
+            <img [src]="item.pic" />
+            <p>{{item.title}}</p>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4" *ngFor="let item of rCateList">
+            <img [src]="item.pic" />
+            <p>{{item.title}}</p>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="4" *ngFor="let item of rCateList">
+            <img [src]="item.pic" />
+            <p>{{item.title}}</p>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="4" *ngFor="let item of rCateList">
+            <img [src]="item.pic" />
+            <p>{{item.title}}</p>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </div>
+  </div>
+
+
+</ion-content>
