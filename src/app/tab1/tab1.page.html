@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+       <img src="/assets/qrcode.png" />
+    </ion-buttons>
+  
+     <ion-searchbar placeholder="请输入关键词" animated></ion-searchbar>
+
+    <ion-buttons slot="end" class="message">
+        <img src="/assets/message.png" />
+        <ion-badge color="danger" class="badge">8</ion-badge>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+
+  <ion-slides pager="true" #slide1 [options]="slidesOpts" (ionSlideTouchEnd)="slideTouchEnd()">
+    <ion-slide *ngFor="let item of slidesList">
+        <img [src]="item.pic" />
+    </ion-slide>
+  </ion-slides>
+
+
+  <div class="h_title">
+      猜你喜欢 
+  </div>
+
+
+  <div class="hotlist">
+
+      <ul class="clearfix" [ngStyle]="{'width': hotListWidth}">
+        <li *ngFor="let item of hotList">
+
+            <img [src]="item.pic" />
+           <p>{{item.title}}</p>
+        </li>
+      </ul>
+
+  </div>
+
+</ion-content>
