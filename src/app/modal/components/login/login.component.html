@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar>      
+      <ion-title>用户登录</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="doClose()">
+          <ion-icon slot="icon-only" name="close"></ion-icon>          
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>用户名：</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>密　码：</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button (click)="doLogin()" extends="block">
+    登录
+  </ion-button>
+</ion-content>
+  
