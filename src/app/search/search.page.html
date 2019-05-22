@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+
+      <ion-button (tap)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Filter Schedules" animated></ion-searchbar>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="doSearch()" color="dark">
+        搜索
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar class="sub_toolbar" *ngIf="!flag">   
+     <div class="subheader">
+
+        <div>综合</div>
+        <div>销量</div>
+        <div>价格</div>
+     </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="search_content" *ngIf="flag" padding>
+    <div class="hotlist">
+      <h3 class="search_title">热搜</h3>
+      <p>
+        <span>女装</span>
+        <span>男装</span>
+        <span>家具</span>
+        <span>化妆品</span>
+        <span>女装</span>
+        <span>女装</span>
+        <span>男装</span>
+        <span>家具</span>
+        <span>化妆品</span>
+
+      </p>
+
+    </div>
+
+    <div class="history">
+
+      <h3 class="search_title">历史搜索</h3>
+
+      <ion-list lines="full">
+        <ion-item>
+          男装
+        </ion-item>
+        <ion-item>
+          女装
+        </ion-item>
+        <ion-item>
+          汽车
+        </ion-item>
+        <ion-item>
+          美容
+        </ion-item>
+      </ion-list>
+
+    </div>
+
+  </div>
+
+
+  <div class="list_content" *ngIf="!flag">
+
+
+
+      <ion-list>
+            <ion-item *ngFor="let item of productList">
+              <ion-thumbnail slot="start">
+                <img [src]="item.pic" />
+              </ion-thumbnail>
+              <ion-label> 
+                  <h3>{{item.title}}</h3>
+                  <p><span class="price">¥{{item.price}}</span></p>
+              </ion-label>
+            </ion-item>
+      </ion-list>
+
+
+  </div>
+</ion-content>
