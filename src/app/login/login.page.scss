@@ -1,0 +1,19 @@
+.login_toolbar{
+    --border-color:#fff;
+}
+
+.login_logo{
+    text-align: center;
+    padding: 1rem;
+    img{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 2rem;       
+    }
+}
+
+.login_list{
+    input,span{
+        font-size: 1.4rem;
+    }
+}
