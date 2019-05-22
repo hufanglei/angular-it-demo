@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+
+      <ion-buttons slot="start">
+
+          <ion-button (tap)="goBack()">
+            <ion-icon slot="icon-only" name="arrow-back" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-searchbar placeholder="请输入搜索关键词" animated></ion-searchbar>
+    
+        <ion-buttons slot="end">
+          <ion-button (click)="doSearch()" color="dark">
+            搜索
+          </ion-button>
+        </ion-buttons>
+
+  </ion-toolbar>
+
+  <ion-toolbar class="sub_toolbar" *ngIf="!flag">   
+      <div class="subheader"> 
+         <div *ngFor="let item of subHeaderList" (click)="subHeaderChange(item.id)" [ngClass]="{'active': subHeaderSelected==item.id}">           
+          {{item.title}}
+        </div>
+        
+      </div>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="list_content" *ngIf="!flag">
+
+
+
+        <ion-list>
+              <ion-item *ngFor="let item of productList">
+                <ion-thumbnail slot="start">
+                  <img [src]="config.domain+item.s_pic" />
+                </ion-thumbnail>
+                <ion-label> 
+                    <h3>{{item.title}}</h3>
+                    <p><span class="price">¥{{item.price}}</span></p>
+                </ion-label>
+              </ion-item>
+        </ion-list>
+  
+
+        <ion-infinite-scroll *ngIf="hasInfiniteData" threshold="100px" (ionInfinite)="getProductList($event)">
+            <ion-infinite-scroll-content
+              loadingSpinner="bubbles"
+              loadingText="努力加载中...">
+            </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+  
+    </div>
+</ion-content>

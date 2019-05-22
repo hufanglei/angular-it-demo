@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="login_toolbar">
+
+    <ion-buttons slot="start">
+
+      <ion-button (click)="goBack()" color="dark">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+    <ion-buttons slot="end">
+
+      <ion-button color="dark">
+        客服
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="login_logo">
+    <img src="assets/logo.gif" />
+  </div>
+
+  <ion-list class="login_list">
+    <ion-item>
+      <ion-input placeholder="手机号/邮箱"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="密码"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+       <span slot="start">忘记密码</span>
+
+       <span slot="end" [routerLink]="['/registerstep1']">新用户注册</span>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button (click)="doLogin()" color="danger" expand="block" class="jd_btn">
+    登录
+  </ion-button>
+
+</ion-content>
