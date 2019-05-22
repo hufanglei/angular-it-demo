@@ -1,0 +1,37 @@
+
+.list_content{
+
+    ion-list{
+
+        ion-item{
+            ion-label{
+
+                white-space: normal;
+            }
+        }
+    }
+}
+
+
+
+.sub_toolbar{     
+    --min-height:3rem;
+
+    .subheader{
+
+        border-top:1px solid #eee;
+        display: flex;    
+        align-items: center;
+        height:3rem;
+        div{
+    
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    .active{
+        color:red;
+    }
+
+}
