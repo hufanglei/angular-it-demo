@@ -1,0 +1,215 @@
+.footer_bar{
+
+    display: flex;
+
+
+    .carticon{
+
+        width:6.6rem;
+
+        position: relative;
+
+        text-align: center;
+
+        ion-icon{
+            color: #999;
+            font-size: 2.8rem;
+        }
+
+        p{
+            text-align: center;
+
+            color: #999;
+            font-size: 1.4rem;
+        }
+
+
+
+        ion-badge{
+
+            position: absolute;
+            right: .3rem;
+            top:-.2rem;
+        }
+
+
+    }
+
+
+    .addcart{
+
+        flex: 1;
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        background: orange;
+        color: #fff;
+
+
+    }
+    .buy{
+        flex: 1;
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        background: red;
+        color: #fff;
+
+    }
+
+}
+
+
+/*商品详情页面的布局*/
+.p_content{
+
+    background: #efefef;
+    //商品
+    .con_1{
+        .p_img{
+
+            width: 100%;
+            height: 15rem;
+            img{
+                width: 100%;
+                height: 15rem;
+            }
+        }
+
+
+        //标题 价格
+        .p_info{
+
+            padding:.5rem;
+
+            background: #fff;
+
+            .p_title{
+                h2{
+                    font-size: 1.6rem;
+                    line-height: 1.5;
+                    padding-bottom:.5rem;
+                }
+
+                p{
+                    font-size: 1.4rem;
+                    color: #666;
+                    line-height: 1.5;
+                }
+
+                padding-bottom:.5rem;
+            }
+
+            .p_price{
+
+                .now_price{
+
+
+                    .price{
+                            color: red;
+
+                            font-size: 2rem;
+                        }
+                
+                }
+
+                .old_price{
+
+                    color:  #666;
+
+                    font-size: 1.4rem;
+
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        //属性
+        .p_attr{
+                background: #fff;
+
+                padding: .5rem .5rem 1.2rem .5rem;
+
+                .attr{
+
+                    padding-bottom: .5rem;
+
+                    span{
+
+                        border: 1px solid #eee;
+
+                        border-radius: .5rem;
+
+                        padding: .5rem 1rem;
+
+                        display: inline-block;
+
+                        margin: .2rem .4rem;
+
+
+                    }
+                }
+
+                //数量
+
+                .number{
+
+                    .cart_number{
+                        float:right;                        
+
+                        width:100px;
+                        display: flex;
+
+
+                        .input_left,.input_right{
+                            width: 38px;                   
+                            height: 28px;
+                            line-height: 28px;                                
+                            text-align:center;
+                            background: #f8f8f8;
+                            border:1px solid #f8f8f8;
+                        }
+                        .input_center{
+                                flex: 1;
+                                height: 28px;
+                                line-height: 28px;    
+                                input{
+                                    border:1px solid #f8f8f8;
+                                    height: 28px;
+                                    line-height: 28px;    
+                                    width: 100%;
+                                    text-align: center;
+                                }
+                        }
+                    }
+                }
+        }   
+
+        //运费
+
+        .fee{
+            background: #fff;
+
+            padding: .5rem;
+
+            margin-bottom: 2rem;
+        }
+    }
+
+    //详情
+    .con_2{
+
+        background: #fff;
+
+        line-height: 2;
+        padding: .5rem;
+
+        img{
+
+            max-width: 90%;
+
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
