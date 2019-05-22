@@ -1,0 +1,43 @@
+.code_info{
+
+    h4{
+
+        font-size: 1.6rem;
+        padding: .5rem 0px;
+    }
+
+    p{
+
+        font-size: 1.3rem;
+
+        color: #666;
+    }
+}
+
+.sign_info{
+
+    margin: 2rem 0px;
+
+    display: flex;
+    input{
+        flex:1;
+        
+        height: 3.2rem;
+        line-height: 3.2rem;
+        border: 1px solid #eee;
+        text-indent: 1rem;
+
+    }
+
+    .timer{
+
+        width: 10rem;
+        height: 3.2rem;
+        line-height: 3.2rem;
+
+        background: #eee;
+        text-align: center;
+        margin-left:1rem;
+        border: 1px solid #eee;
+    }
+}
