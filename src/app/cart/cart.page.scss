@@ -1,0 +1,131 @@
+
+.cart_list{
+
+    display: flex;
+    padding: .5rem;    
+    border:1px solid #eee;
+
+    dt{
+
+        width: 8rem;
+        height: 7rem;       
+        display: flex;
+        align-items: center;
+        ion-checkbox{
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .img{
+
+            flex: 1;
+
+            padding: .5rem;
+            img{
+                width: 100%;
+                height: 6rem;
+            }
+
+        }
+
+
+    }
+
+
+    dd{
+        flex:1;      
+        .cart_title{
+
+            font-size: 1.4rem;
+            height: 4rem;
+        
+            line-height: 1.5;
+        }
+
+        .cart_info{
+
+            height: 3rem;
+            
+
+            display: flex;
+            .cart_price{
+                flex: 1;
+                font-size: 1.4rem;
+
+                height: 2.4rem;
+
+                line-height: 2.4rem;
+            }
+
+            .cart_num{
+                width: 8rem;
+                display: flex;                
+                .input_left,.input_right{
+
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    line-height: 2.4rem;
+                    background: #eee;
+                    border:1px solid #eee;
+                    text-align: center;
+                    font-size: 1.8rem;
+
+                }
+
+                .input_center{
+
+                    flex: 1;
+
+                    input{
+
+                        width: 100%;
+                        height: 2.4rem;
+                        line-height: 2.4rem;
+                        text-align: center;
+                        border:1px solid #eee;
+                    }
+                }
+            }
+
+            
+        }
+
+        
+
+
+    }
+
+}
+
+.checkout_info{
+
+    ion-checkbox{
+        width: 2rem;
+        height: 2rem;
+
+        padding-right: .3rem;
+    }
+
+    strong{
+
+        padding-left: .6rem;
+        font-size: 1.6rem;
+    }
+}
+
+.checkout_btn{
+    ion-button{
+        font-size: 1.4rem;
+    }
+   
+}
+
+.checkbox-disabled{
+    opacity: 0.9!important;
+}
+
+.noCart{
+
+    text-align: center;
+    padding-top:40px;
+}

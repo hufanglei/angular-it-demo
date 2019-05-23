@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>选择支付方式</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item-divider>
+            <ion-label></ion-label>
+        </ion-item-divider>
+        
+        <ion-radio-group [(ngModel)]="payType">
+              <ion-item class="item-radio-checked">
+                <ion-avatar slot="start">
+                  <img src="assets/alipay.png">
+                </ion-avatar>
+                <ion-label>支付宝支付</ion-label>
+    
+                 <ion-radio [ngClass]="{'radio-checked': payType==1}" slot="end" value="1"></ion-radio>
+              </ion-item>
+                
+              <ion-item>
+                  <ion-avatar slot="start">
+                    <img src="assets/weixinpay.png">
+                  </ion-avatar>
+                  <ion-label>微信支付</ion-label>
+    
+                  <ion-radio slot="end" value="2"></ion-radio>
+              </ion-item>
+        </ion-radio-group>
+    </ion-list>
+
+    <ion-button (click)="dopay()" color="danger" expand="block" class="jd_btn">
+        立即支付
+      </ion-button>
+
+
+
+</ion-content>

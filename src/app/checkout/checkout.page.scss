@@ -1,0 +1,57 @@
+.order{
+    background: #eee;
+    .address_list{
+        background: #fff;
+        .nologin{
+             ion-item{
+
+                font-size: 14px;
+
+                ion-button{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+
+    .product_list{
+        background: #fff;
+        margin-bottom: 10px;
+        h2{
+            font-size: 1.4rem;
+        }
+        .count{
+            float: right;
+        }
+        
+    }
+
+    .order_info{
+
+        ul{
+            li{
+
+                font-size: 1.4rem;
+                line-height: 2;                
+            }
+        }
+
+        ion-input{
+            font-size: 1.4rem;
+        }
+    }
+    
+   
+    
+}
+
+
+.list-ios{
+    margin-bottom: 10px;
+}
+
+//注意写法
+ion-item-divider{
+    min-height: 10px!important;
+}

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab1" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>手机快速注册</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class="register_list" lines="none">
+    <ion-item>
+      <input type="password" placeholder="密码" [(ngModel)]="password"/>
+    </ion-item>
+
+    <ion-item>
+
+      <input type="password" placeholder="确认密码" [(ngModel)]="rpassword" />
+    </ion-item>
+
+    <ion-item>
+      <p> 密码由6-20位字母、数字、特殊符号组成，注意大小写</p>
+    </ion-item>
+
+
+  </ion-list>
+
+
+
+  <ion-button (click)="doRegister()" color="danger" expand="block" class="jd_btn">
+    完成注册
+  </ion-button>
+
+</ion-content>
