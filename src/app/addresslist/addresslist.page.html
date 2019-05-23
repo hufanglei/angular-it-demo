@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>收货地址</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list class="address_list">
+    <ion-item *ngFor="let item of list;let key=index">
+      <ion-icon *ngIf="item.default_address" slot="start" name="checkmark" color="danger"></ion-icon>
+      <ion-label (tap)="changeDefaultAddress(item._id)"  (press)="removeAddress(key,item._id)">
+        <h2>{{item.name}} 　　　{{item.phone}}</h2>
+        <p>{{item.address}}</p>
+      </ion-label>
+      <ion-icon slot="end" name="create" color="primary" [routerLink]="['/addressedit']" [queryParams]="item"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="jd_btn" color="danger" [routerLink]="['/addressadd']">
+      +新增收货地址
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

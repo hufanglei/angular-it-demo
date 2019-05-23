@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+
+  <ion-buttons slot="start">
+
+      <ion-button (tap)="goBack()">
+        <ion-icon slot="icon-only" name="arrow-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>确认订单</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <div class="order">
+        <div class="address_list">
+
+          <ion-list *ngIf="userinfo" lines="none">
+              <ion-item [routerLink]="['/addresslist']" *ngIf="!addressList">                  
+                  <ion-icon slot="start" name="pin" color="light"></ion-icon>
+                  请添加您的收货地址                  
+              </ion-item>
+
+              <ion-item [routerLink]="['/addresslist']" *ngIf="addressList">                
+                <ion-label>
+                  <h2>{{addressList.name}} 　　　{{addressList.phone}}</h2>
+                  <p>{{addressList.address}}</p>
+                </ion-label>                
+              </ion-item>          
+
+          </ion-list>
+
+
+
+
+          <ion-list *ngIf="!userinfo" lines="none"  class="nologin">
+              <ion-item>                
+                  <ion-label><p>您还没有登录，登录后同步您的订单信息...</p>  </ion-label>   
+              </ion-item>
+              <ion-item>  
+                  <ion-button color="light" [routerLink]="['/login']" [queryParams]="{returnUrl:'/checkout'}">
+                      登录
+                  </ion-button>
+              </ion-item>
+
+          </ion-list>
+
+        </div>
+
+        <div class="product_list">
+
+          <ion-list lines="none">
+            <ion-item *ngFor="let item of list" >
+              <ion-thumbnail slot="start">
+                <img [src]="config.domain+item.product_pic" />
+              </ion-thumbnail>
+              <ion-label>
+                  <h2>{{item.product_title}}</h2>
+                  <p><span class="price">¥{{item.product_price}}</span> <span class="count">x{{item.product_count}}</span></p>
+                  
+                  <p>属性：{{item.product_attr}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+
+        </div>
+
+        <div class="order_info">              
+            <ion-list lines="none">
+                <ion-item>
+                   <ul>
+                     <li>在线支付</li>
+                     <li>京东快递+快递运输</li>
+                     <li>工作日、双休日于假日均可送货</li>
+                   </ul>                  
+                </ion-item>
+  
+                <ion-item-divider>                
+                </ion-item-divider>
+             
+                <ion-item class="order_price">
+                    <ul>
+                      <li>商品总金额 <span>¥124214</span></li>
+                      <li>立减 <span>-¥5</span></li>
+                      <li>运费 <span>+¥0</span></li>
+                    </ul>
+                </ion-item>
+                <ion-item-divider>                
+                  </ion-item-divider>
+                <ion-item>               
+                  <ion-input placeholder="选填:给商家留言45字以内"></ion-input>
+                </ion-item>
+                <ion-item-divider>                
+                  </ion-item-divider>
+              </ion-list>
+        </div>
+  </div>
+
+</ion-content>
+
+
+
+<ion-footer>
+    <ion-toolbar>
+      <span slot="start">实付款: <span class="price"> ¥2934</span></span>
+
+      <ion-buttons slot="end">      
+        <ion-button color="danger" fill="solid">
+            立即下单
+        </ion-button>
+      </ion-buttons>
+    
+    </ion-toolbar>
+
+    
+  </ion-footer>

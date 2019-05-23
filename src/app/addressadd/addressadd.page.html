@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>增加收货地址</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="姓名" [(ngModel)]='addressList.name'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="电话号码" [(ngModel)]='addressList.phone'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [(ngModel)]='addressList.address' placeholder="收货地址">
+      </ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-button class="jd_btn" (click)="doAddAddress()" color="danger">
+    +增加
+  </ion-button>
+</ion-content>
