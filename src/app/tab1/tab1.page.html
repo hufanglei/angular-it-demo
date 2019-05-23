@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+       <img src="/assets/qrcode.png" />
+    </ion-buttons>
+  
+     <ion-searchbar placeholder="请输入关键词" animated (tap)="goSearch()"></ion-searchbar>
+
+    <ion-buttons slot="end" class="message">
+        <img src="/assets/message.png" />
+
+        <ion-badge color="danger" class="badge">8</ion-badge>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+
+  <ion-slides pager="true" #slide1 [options]="slidesOpts" (ionSlideTouchEnd)="slideTouchEnd()">
+    <ion-slide *ngFor="let item of focusList">
+        <img [src]="config.domain+item.pic" />
+    </ion-slide>
+  </ion-slides>  
+
+
+  <div class="h_title">
+      猜你喜欢
+  </div>
+
+
+  <div class="hotlist">
+      <ul class="clearfix" [ngStyle]="{'width': hotListWidth}">
+        <li *ngFor="let item of hotList" [routerLink]="['/pcontent']" [queryParams]="{id:item._id}">
+             <img [src]="config.domain+item.s_pic" />       
+        </li>
+      </ul>
+  </div>
+
+  <div class="h_title">
+    商品列表
+  </div>
+
+  <div class="plist">
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of pList" [routerLink]="['/pcontent']" [queryParams]="{id:item._id}">
+          <div class="plist_inner"> 
+
+            <img [src]="config.domain+item.s_pic" />       
+            <div class="plist_title">{{item.title}}</div>
+            <p class="price">￥{{item.price}}元</p>
+
+          </div>
+        </ion-col>      
+      </ion-row>
+    </ion-grid>
+
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+
+        <ion-button (tap)="goBack()">
+          <ion-icon slot="icon-only" name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-title>账户管理</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+  <ion-list lines="full">
+        <ion-item>
+          头像
+          <span class="item_note" slot="end">
+            <img src="assets/user.png" class="avatar" />
+          </span>
+          <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+        </ion-item>
+    
+        <ion-item>
+          用户名
+          <span class="item_note" slot="end">
+            alibaba
+          </span>
+    
+          <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+        </ion-item>
+    
+        <ion-item class="item-icon-right">
+    
+          昵称
+          <span class="item_note" slot="end">
+            alibaba
+          </span>
+          <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+        </ion-item>
+    
+        <ion-item (click)="showSex()">
+          性别
+          <span class="item_note" slot="end">
+         {{userSettings.sex}}
+          </span>
+          <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+        </ion-item>
+    
+        <ion-item>
+          出生日期
+          <span class="item_note" slot="end">
+            <ion-datetime display-format="YYYY-MM-DD" [(ngModel)]="userSettings.day" [pickerOptions]="customPickerOptions"></ion-datetime>
+          
+          </span>     
+          <ion-icon name="ios-arrow-forward" slot="end"></ion-icon>
+        </ion-item>   
+     
+   
+  </ion-list>
+
+
+  <ion-button (click)="doLoginOut()" color="danger" expand="block" class="jd_btn">
+      退出登录
+  </ion-button>
+
+
+</ion-content>
