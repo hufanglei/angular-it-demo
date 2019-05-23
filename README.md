@@ -25,7 +25,7 @@ Hack”的方式来模拟，模拟方式也各有不同，很难统一和标准�
 
 ### 2、ionic Packages
 
-![1558274165283](images/1558274165283.png)
+![1558606113266](images/1558606113266.png)
 
 Ionic = Cordova + Angular + ionic CSS
 Ionic=Cordova + React+ ionic CSS
