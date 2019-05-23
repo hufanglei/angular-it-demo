@@ -1,0 +1,55 @@
+<ion-content>
+
+  <div class="user_top" *ngIf="userinfo">
+      <div class="user_left">
+          <img src="/assets/user.png">
+      </div>
+      <div class="user_right">
+          <h4>用户名:{{userinfo.username}}</h4>
+          <p>普通会员</p>  
+      </div>        
+  </div>
+
+
+  <div class="user_top" *ngIf="!userinfo">
+      <div class="user_left">
+          <img src="/assets/user.png">
+      </div>
+      <div class="user_right">          
+          <p [routerLink]="['/login']">登录/注册  <ion-icon slot="start" name="arrow-forward"></ion-icon></p>  
+      </div>        
+  </div>
+
+
+  <ion-list class="user_list">
+    <ion-item-divider>
+     </ion-item-divider>
+    <ion-item>     
+      <ion-icon name="paper" slot="start" color="danger"></ion-icon>
+      <span>全部订单</span>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="card" slot="start" color="success"></ion-icon>
+      <span> 待付款</span>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="subway" slot="start" color="warning"></ion-icon>
+      <span>待收货</span>
+    </ion-item>
+
+    <ion-item-divider>
+    </ion-item-divider>
+    <ion-item>
+      <ion-icon name="ios-star-outline" slot="start" color="tertiary"></ion-icon>
+      <span>我的收藏</span>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="people" slot="start" color="secondary"></ion-icon>
+      <span>在线客服</span>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="doMessage()">
+    触发广播
+  </ion-button>
+</ion-content>
