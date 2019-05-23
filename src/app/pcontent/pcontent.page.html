@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button color="dark" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-segment [(ngModel)]="tab" color="danger">
+      <ion-segment-button value="list">
+        <ion-label>商品</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="content">
+        <ion-label>详情</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <div [ngSwitch]="tab" class="p_content">
+
+        <div  *ngSwitchCase="'list'" class="con_1">
+            
+
+              <div class="p_img" *ngIf="list.pic">
+                <img [src]="config.domain+list.pic" />              
+              </div>
+              <div class="p_info mb10">
+                  <div class="p_title">
+                      <h2>{{list.title}}</h2>
+                      <p>{{list.sub_title}}</p>
+                  </div>
+                  <div class="p_price mb10">
+                      <span class="now_price">特价：<span class="price">¥{{list.price}}</span></span> 　 　原价：<span class="old_price"> ¥{{list.old_price}}</span>  
+                  </div>
+              </div>
+
+
+              <div class="p_attr mb10">
+
+                    <div id="myAttr" (click)="changeAttr($event)">
+                        <div class="attr" *ngFor="let items of list.attr;">
+                              <strong>{{items.cate}}：</strong>
+                              <span [ngClass]="{'active': key==0}" *ngFor="let attr of items.list;let key=index;">{{attr}}</span>                      
+                        </div>
+                    </div>
+
+                   
+
+                  <div class="number">            
+                      <strong>数量:</strong>            
+                      <div class="cart_number">
+                            <div class="input_left" (click)="decNum()">-</div>
+                            <div class="input_center">
+                                <input type="text"  readonly="readonly" value="1" name="num" [(ngModel)]="num" />
+                            </div>
+                            <div class="input_right" (click)="incNum()">+</div>
+                      </div>
+                </div>
+
+                
+            </div>
+
+
+              
+            <div class="fee mb10">
+                运费:免运费
+              </div>
+
+        </div>
+
+        <div *ngSwitchCase="'content'" class="con_2">
+
+          <div [innerHTML]='list.content'>
+            
+          </div>
+        </div>
+
+    </div>
+     
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>   
+
+      <div class="footer_bar">
+          <div class="carticon">
+              <ion-icon slot="start" name="cart"></ion-icon>
+              <p>购物车</p>
+              <ion-badge color="danger">1</ion-badge>
+          </div>
+          
+          <div class="addcart" (click)="addCart()">
+              加入购物车
+          </div>
+          <div class="buy">
+  
+              立即购买
+          </div>
+        </div>
+
+  </ion-toolbar>
+</ion-footer>
