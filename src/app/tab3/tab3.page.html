@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Three
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+  <dl class="cart_list" *ngFor="let item of list">
+    <dt>
+      <ion-checkbox color="danger"></ion-checkbox>
+      <div class="img">
+
+          <img [src]="config.domain+item.product_pic" />
+      </div>
+    </dt>
+    <dd>
+        <h2 class="cart_title">{{item.product_title}}</h2>
+      <div class="cart_info">
+        <div class="cart_price price">
+            ¥{{item.product_price}}元
+        </div>
+        <div class="cart_num">
+          <div class="input_left" (click)="decCount(item)">-</div>
+          <div class="input_center">
+              <input type="text"  readonly="readonly" [(ngModel)]="item.product_count" name="num" id="num" />
+          </div>
+          <div class="input_right" (click)="incCount(item)">+</div>
+        </div>
+      </div>
+    </dd>
+  </dl>
+
+</ion-content>
+
+
+
+<ion-footer>
+
+  <ion-toolbar>
+
+      <ion-buttons slot="start" class="checkout_info">      
+        <ion-checkbox color="danger"></ion-checkbox>全选
+
+        <strong>合计：<span class="price">¥2000</span></strong>
+      </ion-buttons>
+    
+
+    <ion-buttons slot="end" class="checkout_btn">      
+      <ion-button color="danger" fill="solid">
+        去结算
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-footer>
